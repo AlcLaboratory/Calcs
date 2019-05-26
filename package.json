@@ -37,6 +37,7 @@
     "tns-core-modules": "~5.4.0",
     "tough-cookie": "^3.0.1",
     "tunnel-agent": "^0.6.0",
+    "webpack-bundle-analyzer": "^3.3.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
