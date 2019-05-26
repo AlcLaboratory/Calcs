@@ -1,0 +1,16 @@
+.settings {
+  text-align: center;
+  margin: 30;
+}
+
+.settings .settings-label {
+  font-size: 26;
+}
+
+.settings .my-fitness-pal-username {
+  placeholder-color: #fff;
+}
+
+.settings .save-button {
+  background-color: #4b83a8;
+}

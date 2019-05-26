@@ -1,0 +1,16 @@
+<TabView
+    androidTabsPosition="bottom"
+    tabBackgroundColor="#4b83a8"
+    selectedTabTextColor="#fb8d38"
+    tabTextColor="#fff"
+    class="dashboard">
+    <StackLayout *tabItem="{title: 'Calendar'}">
+        <ns-calendar></ns-calendar>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Diets'}">
+        <ns-diets-list></ns-diets-list>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Settings'}">
+        <ns-settings></ns-settings>
+    </StackLayout>
+</TabView>

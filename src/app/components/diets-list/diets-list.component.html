@@ -1,0 +1,5 @@
+<ListView [items]="diets$ | async" class="diets-list">
+    <ng-template let-item="item">
+        <Label [text]="item?.name" class="diet-name"></Label>
+    </ng-template>
+</ListView>

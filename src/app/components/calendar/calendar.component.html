@@ -1,0 +1,12 @@
+<ScrollView height="100%">
+    <StackLayout class="calendar" *ngIf="selectedWeek">
+        <Label class="selected-week" text="Week {{selectedWeek.number}}"></Label>
+        <StackLayout class="day" ns-calendar-day [day]="selectedWeek.monday" [label]="days.Monday"></StackLayout>
+        <StackLayout class="day" ns-calendar-day [day]="selectedWeek.tuesday" [label]="days.Tuesday"></StackLayout>
+        <StackLayout class="day" ns-calendar-day [day]="selectedWeek.wednesday" [label]="days.Wednesday"></StackLayout>
+        <StackLayout class="day" ns-calendar-day [day]="selectedWeek.thursday" [label]="days.Thursday"></StackLayout>
+        <StackLayout class="day" ns-calendar-day [day]="selectedWeek.friday" [label]="days.Friday"></StackLayout>
+        <StackLayout class="day" ns-calendar-day [day]="selectedWeek.saturday" [label]="days.Saturday"></StackLayout>
+        <StackLayout class="day" ns-calendar-day [day]="selectedWeek.sunday" [label]="days.Sunday"></StackLayout>
+    </StackLayout>
+</ScrollView>
