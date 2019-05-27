@@ -3,7 +3,6 @@ import { Week } from '~/app/interfaces/week.interface';
 import { map } from 'rxjs/operators';
 import { MyFitnessPalService } from '~/app/services/my-fitness-pal.service';
 import { Subscription } from 'rxjs';
-import { Days } from '~/app/enums/days.enum';
 
 @Component({
     selector: 'ns-calendar',
@@ -14,7 +13,6 @@ import { Days } from '~/app/enums/days.enum';
 export class CalendarComponent {
     private subscription: Subscription = new Subscription();
     public selectedWeek: Week;
-    public days = Days;
 
     public constructor(private myFitnessPalService: MyFitnessPalService) {}
 

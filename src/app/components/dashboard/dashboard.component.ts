@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Page, Color } from 'tns-core-modules/ui/page/page';
+import { Diet } from '~/app/interfaces/diet.interface';
 
 @Component({
   selector: 'ns-dashboard',
@@ -8,11 +9,16 @@ import { Page, Color } from 'tns-core-modules/ui/page/page';
   moduleId: module.id
 })
 export class DashboardComponent implements OnInit {
+    public dietToEdit: Diet;
 
     public constructor(private page: Page) {}
 
     public ngOnInit(): void {
         this.setPageConfig();
+    }
+
+    public onDietItemTap(diet: Diet): void {
+        this.dietToEdit = diet;
     }
 
     private setPageConfig(): void {

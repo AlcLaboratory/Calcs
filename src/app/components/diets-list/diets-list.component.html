@@ -1,7 +1,9 @@
 <GridLayout rows="*, 80" class="diets-list-container">
-    <ListView row="0" [items]="diets$ | async" class="diets-list">
+    <ListView  row="0" [items]="diets$ | async" class="diets-list">
         <ng-template let-item="item">
-            <Label [text]="item?.name" class="diet-name"></Label>
+            <StackLayout (tap)="onDietTap(item)">
+                <Label [text]="item?.name" class="diet-name"></Label>
+            </StackLayout>
         </ng-template>
     </ListView>
     <StackLayout ns-button [text]="'Create new diet'" row="1"></StackLayout>

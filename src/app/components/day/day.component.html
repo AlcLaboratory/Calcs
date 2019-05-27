@@ -1,0 +1,16 @@
+<GridLayout
+    *ngIf="day"
+    rows="25, 40, 10, 20, 40"
+    columns="*, *, *"
+    class="day">
+    <Label class="day-label" row="0" col="0" [text]="label"></Label>
+    <Label [class]="fieldClass" row="0" col="2" text="Calories"></Label>
+    <TextField [class]="fieldClass" [editable]="isEditable" row="1" col="2" [text]="day.calories"></TextField>
+    <Label [class]="fieldClass" row="3" col="0" text="Proteins"></Label>
+    <Label [class]="fieldClass" row="3" col="1" text="Fats"></Label>
+    <Label [class]="fieldClass" row="3" col="2" text="Carbohydrates"></Label>
+    <TextField [class]="fieldClass" [editable]="isEditable" row="4" col="0" [text]="day.proteins"></TextField>
+    <TextField [class]="fieldClass" [editable]="isEditable" row="4" col="1" [text]="day.fats"></TextField>
+    <TextField [class]="fieldClass" [editable]="isEditable" row="4" col="2" [text]="day.carbohydrates"></TextField>
+</GridLayout>
+

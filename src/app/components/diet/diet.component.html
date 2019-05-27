@@ -1,0 +1,12 @@
+<ScrollView class="diet-container">
+    <GridLayout rows="50, *" *ngIf="diet">
+        <TextField row="0" hint="diet name" [text]="diet.label"></TextField>
+        <StackLayout
+            ns-week
+            row="1"
+            class="calendar"
+            [week]="diet.week"
+            [isEditable]="isEditable">
+        </StackLayout>
+    </GridLayout>
+</ScrollView>

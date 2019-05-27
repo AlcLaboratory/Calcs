@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { DietsService } from '~/app/services/diets.service';
 import { Observable } from 'rxjs';
 import { Diet } from '~/app/interfaces/diet.interface';
@@ -11,6 +11,11 @@ import { Diet } from '~/app/interfaces/diet.interface';
 })
 export class DietsListComponent {
     public diets$: Observable<Diet[]> = this.dietsService.getDiets();
+    @Output() public itemTapEvent: EventEmitter<Diet> = new EventEmitter<Diet>();
 
-    public constructor(private dietsService: DietsService) {}
+    public constructor( private dietsService: DietsService) {}
+
+    public onDietTap(diet: Diet): void {
+        this.itemTapEvent.emit(diet);
+    }
 }

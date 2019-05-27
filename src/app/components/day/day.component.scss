@@ -1,15 +1,17 @@
 @import '../../styles/index.scss';
 
-.calendar-day {
+.day {
     background-color: $background-box-color;
     padding: 10 10 0 10;
 
-    .calendar-day-label {
+    .day-label {
         padding-top: -5;
         font-size: 20;
     }
 
-    .calendar-day-info {
+    .day-field {
         text-align: center;
+        border-bottom-width: 1;
+        border-color: transparent;
     }
 }
