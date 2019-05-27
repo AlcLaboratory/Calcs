@@ -1,15 +1,18 @@
 @import '../../styles/index.scss';
 
-.diets-list {
-    height: 100%;
+.diets-list-container {
+    margin: 30 30 0 30;
 
-    .diet-name {
-        margin: 20;
-        text-align: center;
-        background-color: $background-box-color;
-        height: 60;
-        font-size: 22;
-        padding: 16;
+    .diets-list {
+        height: 100%;
+
+        .diet-name {
+            margin: 20;
+            text-align: center;
+            background-color: $background-box-color;
+            height: 60;
+            font-size: 22;
+            padding: 16;
+        }
     }
 }
-

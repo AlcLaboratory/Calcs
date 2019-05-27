@@ -1,5 +1,8 @@
-<ListView [items]="diets$ | async" class="diets-list">
-    <ng-template let-item="item">
-        <Label [text]="item?.name" class="diet-name"></Label>
-    </ng-template>
-</ListView>
+<GridLayout rows="*, 80" class="diets-list-container">
+    <ListView row="0" [items]="diets$ | async" class="diets-list">
+        <ng-template let-item="item">
+            <Label [text]="item?.name" class="diet-name"></Label>
+        </ng-template>
+    </ListView>
+    <StackLayout ns-button [text]="'Create new diet'" row="1"></StackLayout>
+</GridLayout>

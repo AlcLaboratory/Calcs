@@ -11,6 +11,7 @@ import { DietsListComponent } from './components/diets-list/diets-list.component
 import { SettingsComponent } from './components/settings/settings.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CalendarDayComponent } from './components/calendar-day/calendar-day.component';
+import { ButtonComponent } from "./components/button/button.component";
 
 import { HttpRequestService } from "./services/http-request.service";
 import { MyFitnessPalService } from "./services/my-fitness-pal.service";
@@ -33,6 +34,7 @@ import { DietsService } from "./services/diets.service";
         SettingsComponent,
         DashboardComponent,
         CalendarDayComponent,
+        ButtonComponent
     ],
     providers: [
         HttpRequestService,
