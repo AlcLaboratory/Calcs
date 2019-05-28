@@ -6,5 +6,10 @@
             </StackLayout>
         </ng-template>
     </ListView>
-    <StackLayout ns-button [text]="'Create new diet'" row="1"></StackLayout>
+    <StackLayout
+        ns-button
+        [text]="'Create new diet'"
+        (tapEvent)="onNewButtonTap()"
+        row="1">
+    </StackLayout>
 </GridLayout>

@@ -3,14 +3,18 @@
     tabBackgroundColor="#4b83a8"
     selectedTabTextColor="#fb8d38"
     tabTextColor="#fff"
+    (selectedIndexChanged)="onSelectedIndexChanged($event)"
     class="dashboard">
     <StackLayout *tabItem="{title: 'Calendar'}">
         <ns-calendar></ns-calendar>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Diets'}">
-        <ns-diet *ngIf="dietToEdit; else dietsList" [diet]="dietToEdit" [isEditable]="true"></ns-diet>
+        <ns-diet *ngIf="dietToEdit; else dietsList" [diet]="dietToEdit" [editable]="true"></ns-diet>
         <ng-template #dietsList>
-            <ns-diets-list (itemTapEvent)="onDietItemTap($event)"></ns-diets-list>
+            <ns-diets-list
+                (itemTapEvent)="onDietItemTap($event)"
+                (newButtonTapEvent)="onNewDietButtonTap()">
+            </ns-diets-list>
         </ng-template>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Settings'}">

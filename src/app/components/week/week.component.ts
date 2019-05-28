@@ -11,7 +11,6 @@ import { Days } from '~/app/enums/days.enum';
 })
 export class WeekComponent {
     @Input() public week: Week;
-    @Input() public isEditable: boolean;
+    @Input() public editable: boolean;
     public readonly days = Days;
-
 }

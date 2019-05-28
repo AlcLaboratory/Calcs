@@ -11,4 +11,20 @@ export class DietsService {
     public getDiets(): Observable<Diet[]> {
         return of([diet52, balancedDiet, intermittentFastingDiet]);
     }
+
+    public createEmptyDiet(): Diet {
+        return {
+            name: '',
+            description: '',
+            week: {
+                monday: {},
+                tuesday: {},
+                wednesday: {},
+                thursday: {},
+                friday: {},
+                saturday:{},
+                sunday: {}
+            }
+        }
+    }
 }

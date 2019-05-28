@@ -10,7 +10,7 @@ import { Day } from '~/app/interfaces/day.interface';
 export class DayComponent {
     @Input() public day: Day;
     @Input() public label: string;
-    @Input() public isEditable: boolean;
+    @Input() public editable: boolean;
 
     private readonly fieldClass: string = 'day-field';
 }

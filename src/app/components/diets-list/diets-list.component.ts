@@ -12,10 +12,15 @@ import { Diet } from '~/app/interfaces/diet.interface';
 export class DietsListComponent {
     public diets$: Observable<Diet[]> = this.dietsService.getDiets();
     @Output() public itemTapEvent: EventEmitter<Diet> = new EventEmitter<Diet>();
+    @Output() public newButtonTapEvent: EventEmitter<null> = new EventEmitter<null>();
 
     public constructor( private dietsService: DietsService) {}
 
     public onDietTap(diet: Diet): void {
         this.itemTapEvent.emit(diet);
+    }
+
+    public onNewButtonTap(): void {
+        this.newButtonTapEvent.emit(null);
     }
 }

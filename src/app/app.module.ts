@@ -14,6 +14,7 @@ import { DayComponent } from './components/day/day.component';
 import { ButtonComponent } from './components/button/button.component';
 import { DietComponent } from './components/diet/diet.component';
 import { WeekComponent } from './components/week/week.component';
+import { TextfieldComponent } from './components/textfield/textfield.component';
 
 import { HttpRequestService } from './services/http-request.service';
 import { MyFitnessPalService } from './services/my-fitness-pal.service';
@@ -38,7 +39,8 @@ import { DietsService } from './services/diets.service';
         DayComponent,
         ButtonComponent,
         DietComponent,
-        WeekComponent
+        WeekComponent,
+        TextfieldComponent
     ],
     providers: [
         HttpRequestService,

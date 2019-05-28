@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'ns-button, [ns-button]',
@@ -9,4 +9,9 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 })
 export class ButtonComponent {
     @Input() public text: string;
+    @Output() public tapEvent: EventEmitter<null> = new EventEmitter<null>();
+
+    public onTapEvent(): void {
+        this.tapEvent.emit(null);
+    }
 }

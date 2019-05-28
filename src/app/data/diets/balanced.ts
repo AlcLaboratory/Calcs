@@ -5,25 +5,46 @@ export const balancedDiet: Diet = {
     description: '',
     week: {
         monday: {
-            calories: 2000
+            calories: 2000,
+            proteins: 25,
+            carbohydrates: 10,
+            fats: 10
         },
         tuesday: {
-            calories: 2000
+            calories: 2000,
+            proteins: 25,
+            carbohydrates: 10,
+            fats: 10
         },
         wednesday: {
-            calories: 2000
+            calories: 2000,
+            proteins: 25,
+            carbohydrates: 10,
+            fats: 10
         },
         thursday: {
-            calories: 2000
+            calories: 2000,
+            proteins: 25,
+            carbohydrates: 10,
+            fats: 10
         },
         friday: {
-            calories: 2000
+            calories: 2000,
+            proteins: 25,
+            carbohydrates: 10,
+            fats: 10
         },
         saturday: {
-            calories: 2000
+            calories: 2000,
+            proteins: 25,
+            carbohydrates: 10,
+            fats: 10
         },
         sunday: {
-            calories: 2000
+            calories: 2000,
+            proteins: 25,
+            carbohydrates: 10,
+            fats: 10
         }
     }
 }

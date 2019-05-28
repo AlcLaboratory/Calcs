@@ -1,0 +1,9 @@
+.default-textfield {
+  placeholder-color: #fff;
+  text-align: center;
+}
+
+.uneditable-textfield {
+  border-bottom-width: 1;
+  border-color: transparent;
+}
