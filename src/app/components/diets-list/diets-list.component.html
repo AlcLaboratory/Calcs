@@ -1,9 +1,10 @@
 <GridLayout rows="*, 80" class="diets-list-container">
     <ListView  row="0" [items]="diets$ | async" class="diets-list">
         <ng-template let-item="item">
-            <StackLayout (tap)="onDietTap(item)">
-                <Label [text]="item?.name" class="diet-name"></Label>
-            </StackLayout>
+            <GridLayout columns="*, 50" class="diet-name">
+                <Label [text]="item?.name" col="0" (tap)="onDietTap(item)"></Label>
+                <Label [text]="'x'" col="1" class="diet-remove-button" (tap)="onRemoveButtonTap(item)"></Label>
+            </GridLayout>
         </ng-template>
     </ListView>
     <StackLayout

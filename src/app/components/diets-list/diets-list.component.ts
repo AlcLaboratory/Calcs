@@ -14,7 +14,7 @@ export class DietsListComponent {
     @Output() public itemTapEvent: EventEmitter<Diet> = new EventEmitter<Diet>();
     @Output() public newButtonTapEvent: EventEmitter<null> = new EventEmitter<null>();
 
-    public constructor( private dietsService: DietsService) {}
+    public constructor(private dietsService: DietsService) {}
 
     public onDietTap(diet: Diet): void {
         this.itemTapEvent.emit(diet);
@@ -22,5 +22,9 @@ export class DietsListComponent {
 
     public onNewButtonTap(): void {
         this.newButtonTapEvent.emit(null);
+    }
+
+    public onRemoveButtonTap(diet: Diet): void {
+        this.dietsService.removeDiet(diet);
     }
 }
