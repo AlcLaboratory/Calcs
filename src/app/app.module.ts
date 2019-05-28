@@ -1,6 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
+import { NativeScriptFormsModule } from "nativescript-angular/forms"
 
 import { AppRoutingModule } from './app-routing.module';
 import { TNSCheckBoxModule } from 'nativescript-checkbox/angular';
@@ -27,6 +28,7 @@ import { DietsService } from './services/diets.service';
     imports: [
         NativeScriptModule,
         NativeScriptHttpClientModule,
+        NativeScriptFormsModule,
         AppRoutingModule,
         TNSCheckBoxModule
     ],

@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { KeyboardType } from 'tns-core-modules/ui/editable-text-base';
 
 @Component({
     selector: 'ns-textfield, [ns-textfield]',
@@ -7,7 +8,13 @@ import { Component, Input } from '@angular/core';
     moduleId: module.id
 })
 export class TextfieldComponent {
-    @Input() public text: string;
+    @Input() public model: string;
     @Input() public hint: string;
     @Input() public editable: boolean = true;
+    @Input() public keyboardType: KeyboardType;
+    @Output() public modelChangeEvent: EventEmitter<string> = new EventEmitter<string>();
+
+    public onModelChange(value: string): void {
+        this.modelChangeEvent.emit(value);
+    }
 }

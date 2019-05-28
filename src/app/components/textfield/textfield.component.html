@@ -2,6 +2,8 @@
     class="default-textfield"
     [ngClass]="{'uneditable-textfield': !editable}"
     [hint]="hint"
+    [keyboardType]="keyboardType"
     [editable]="editable"
-    [text]="text">
+    [(ngModel)]="model"
+    (ngModelChange)="onModelChange($event)">
 </TextField>

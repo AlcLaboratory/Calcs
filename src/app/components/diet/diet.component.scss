@@ -1,3 +1,19 @@
+$margin: 20;
+
 .diet-container {
     height: 100%;
+
+    .diet-name {
+        margin: 0 $margin 0 $margin;
+        font-size: 26;
+    }
+
+    .diet-goals-label {
+        margin: $margin 0 0 $margin;
+        font-size: 18;
+    }
+
+    .diet-save-button {
+        margin: 0 10 0 10;
+    }
 }

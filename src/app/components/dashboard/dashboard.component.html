@@ -9,7 +9,12 @@
         <ns-calendar></ns-calendar>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Diets'}">
-        <ns-diet *ngIf="dietToEdit; else dietsList" [diet]="dietToEdit" [editable]="true"></ns-diet>
+        <ns-diet
+            *ngIf="dietToEdit; else dietsList"
+            [diet]="dietToEdit"
+            (dietSavedEvent)="onDietSaved($event)"
+            [editable]="true">
+        </ns-diet>
         <ng-template #dietsList>
             <ns-diets-list
                 (itemTapEvent)="onDietItemTap($event)"

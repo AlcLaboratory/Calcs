@@ -2,7 +2,7 @@ import { Diet } from '~/app/interfaces/diet.interface';
 
 export const intermittentFastingDiet: Diet = {
     name: 'intermittent fasting',
-    description: '',
+    description: 'mock diet description',
     week: {
         monday: {
             calories: 2000,

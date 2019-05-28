@@ -1,12 +1,27 @@
 <ScrollView class="diet-container">
-    <GridLayout rows="50, *" *ngIf="diet">
-        <StackLayout ns-textfield row="0" [hint]="'diet name'" [text]="diet.name"></StackLayout>
+    <GridLayout rows="50, 50, 50, *, *, 20" *ngIf="diet">
+        <StackLayout
+            ns-textfield
+            row="1"
+            class="diet-name"
+            [hint]="'diet name'"
+            [model]="diet.name"
+            (modelChangeEvent)="onModelChange($event, 'name')">
+        </StackLayout>
+        <Label text="Your goals" class="diet-goals-label" row="2"></Label>
         <StackLayout
             ns-week
-            row="1"
+            row="3"
             class="calendar"
             [week]="diet.week"
             [editable]="editable">
+        </StackLayout>
+        <StackLayout
+            ns-button
+            [text]="'Save diet'"
+            class="diet-save-button"
+            (tapEvent)="onSaveButtonTap()"
+            row="4">
         </StackLayout>
     </GridLayout>
 </ScrollView>

@@ -2,7 +2,7 @@ import { Diet } from '~/app/interfaces/diet.interface';
 
 export const balancedDiet: Diet = {
     name: 'balanced diet',
-    description: '',
+    description: 'balanced diet description',
     week: {
         monday: {
             calories: 2000,

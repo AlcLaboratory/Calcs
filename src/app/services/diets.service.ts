@@ -7,9 +7,15 @@ import { Observable, of } from "rxjs";
 
 @Injectable()
 export class DietsService {
+    private readonly diets: Diet[] = [diet52, balancedDiet, intermittentFastingDiet];
+
 
     public getDiets(): Observable<Diet[]> {
-        return of([diet52, balancedDiet, intermittentFastingDiet]);
+        return of(this.diets);
+    }
+
+    public addDiet(diet: Diet): void {
+        this.diets.push(diet);
     }
 
     public createEmptyDiet(): Diet {

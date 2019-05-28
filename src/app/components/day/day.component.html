@@ -3,14 +3,71 @@
     rows="25, 40, 10, 20, 40"
     columns="*, *, *"
     class="day">
-    <Label class="day-label" row="0" col="0" [text]="label"></Label>
-    <Label [class]="fieldClass" row="0" col="2" text="Calories"></Label>
-    <StackLayout ns-textfield [class]="fieldClass" [editable]="editable" row="1" col="2" [text]="day.calories"></StackLayout>
-    <Label [class]="fieldClass" row="3" col="0" text="Proteins"></Label>
-    <Label [class]="fieldClass" row="3" col="1" text="Fats"></Label>
-    <Label [class]="fieldClass" row="3" col="2" text="Carbohydrates"></Label>
-    <StackLayout ns-textfield [editable]="editable" [text]="day.proteins" row="4" col="0"></StackLayout>
-    <StackLayout ns-textfield [editable]="editable" [text]="day.fats" row="4" col="1"></StackLayout>
-    <StackLayout ns-textfield [editable]="editable" [text]="day.carbohydrates" row="4" col="2"></StackLayout>
+    <Label
+        class="day-label"
+        row="0"
+        col="0"
+        [text]="label">
+    </Label>
+    <Label
+        [class]="fieldClass"
+        row="0"
+        col="2"
+        text="Calories">
+    </Label>
+    <StackLayout
+        ns-textfield
+        [class]="fieldClass"
+        [keyboardType]="numberKeyboardType"
+        [editable]="editable"
+        row="1"
+        col="2"
+        [model]="day.calories"
+        (modelChangeEvent)="onDietModelChange($event, 'calories')">
+    </StackLayout>
+    <Label
+        [class]="fieldClass"
+        row="3"
+        col="0"
+        text="Proteins">
+    </Label>
+    <Label
+        [class]="fieldClass"
+        row="3"
+        col="1"
+        text="Fats">
+    </Label>
+    <Label
+        [class]="fieldClass"
+        row="3"
+        col="2"
+        text="Carbohydrates">
+    </Label>
+    <StackLayout
+        ns-textfield
+        [editable]="editable"
+        [keyboardType]="numberKeyboardType"
+        [model]="day.proteins"
+        (modelChangeEvent)="onDietModelChange($event, 'proteins')"
+        row="4"
+        col="0">
+    </StackLayout>
+    <StackLayout
+        ns-textfield
+        [editable]="editable"
+        [keyboardType]="numberKeyboardType"
+        [model]="day.fats"
+        (modelChangeEvent)="onDietModelChange($event, 'fats')"
+        row="4"
+        col="1">
+    </StackLayout>
+    <StackLayout
+        ns-textfield
+        [editable]="editable"
+        [keyboardType]="numberKeyboardType"
+        [model]="day.carbohydrates"
+        (modelChangeEvent)="onDietModelChange($event, 'carbohydrates')"
+        row="4"
+        col="2">
+    </StackLayout>
 </GridLayout>
-

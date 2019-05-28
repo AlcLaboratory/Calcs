@@ -25,6 +25,12 @@ export class DashboardComponent implements OnInit {
         this.dietToEdit = diet;
     }
 
+    public onDietSaved(saved: boolean): void {
+        if (saved) {
+            this.dietToEdit = null;
+        }
+    }
+
     public onNewDietButtonTap(): void {
         this.dietToEdit = this.dietsService.createEmptyDiet();
     }
