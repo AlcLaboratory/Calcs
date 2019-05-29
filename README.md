@@ -26,5 +26,16 @@ You can easly set different calories/proteins/fats/carbs goals for each day.
   - npm run android
   
   
- However, the app is still in the early stage. Right now, I'm working on the design and the diets list (CRUD feautures).
- I want to add the connection with the MyFitnessPal later.
+ However, the app is still in the early stage.
+ 
+ **TODO List**
+ - a validation in a diets list
+ - notifications after saving/removing a diet
+ - push notifications
+ - saving diets in the memory
+ - connection with the MyFitnessPal
+ - improve the desing (icons, colors e.t.c)
+ 
+ **Might TODO list**
+ - translates with i18n - it's not important right now because english version probably will be the only version
+ - refactor - change ngModel to FormGroup. I don't think this is important and necessary
