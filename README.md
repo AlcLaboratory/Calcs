@@ -30,7 +30,8 @@ You can easly set different calories/proteins/fats/carbs goals for each day.
  
  **TODO List**
  - a validation in a diets list
- - notifications after saving/removing a diet
+ - ~~notifications after saving/removing a diet~~ done
+ - ~~CRUD diets list~~ done
  - push notifications
  - saving diets in the memory
  - connection with the MyFitnessPal
