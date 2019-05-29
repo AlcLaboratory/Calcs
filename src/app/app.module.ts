@@ -20,6 +20,7 @@ import { TextfieldComponent } from './components/textfield/textfield.component';
 import { HttpRequestService } from './services/http-request.service';
 import { MyFitnessPalService } from './services/my-fitness-pal.service';
 import { DietsService } from './services/diets.service';
+import { NotificationService } from './services/notification.service';
 
 @NgModule({
     bootstrap: [
@@ -47,7 +48,8 @@ import { DietsService } from './services/diets.service';
     providers: [
         HttpRequestService,
         MyFitnessPalService,
-        DietsService
+        DietsService,
+        NotificationService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
